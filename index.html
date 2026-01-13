@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Переход на Aviasales</title>
+
+    <!-- Блокируем открытие приложений -->
+    <meta name="apple-itunes-app" content="app-id=0">
+    <meta name="google-play-app" content="app-id=none">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const target = params.get("url");
+
+        if (target) {
+            setTimeout(() => {
+                window.location.href = target;
+            }, 1000);
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>🔎 Проверяем цену билета…</h2>
+    <p>Если страница не открылась автоматически — подождите 1–2 секунды</p>
+</body>
+</html>
